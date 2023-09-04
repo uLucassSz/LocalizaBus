@@ -11,6 +11,8 @@ const app = express();
 app.use(express.json())
 app.use(cors())
 
+app.use(express.static('html'))
+
 app.get('/ping', (req, res) => {
     return res.send('PONG')
 })
@@ -40,7 +42,7 @@ app.get("/", (req, res) => {
 // app.put -> "Criar"
 // app.patch -> "Editar"
 
-app.listen(8000, '0.0.0.0', error => {
+app.listen(8080, '0.0.0.0', error => {
     if(error) return console.log(error)
     connectDatabase()
     return console.log('API Conectada!')
