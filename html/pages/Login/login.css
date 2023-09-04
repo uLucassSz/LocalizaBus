@@ -1,0 +1,85 @@
+.login-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.login-box{
+    max-width: 450px;
+    width: 100%;
+    padding: 40px 50px;
+    background: var(--box-color);
+    border-radius: 8px;
+    box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.30);
+}
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+}
+.heading h4{
+    font-size: 1.25rem;
+    color: var(--white-color);
+    font-weight: 600;
+}
+.heading p{
+    max-width: 300px;
+    width: 100%;
+    font-size: .9375rem;
+    color: #C1C1C1;
+}
+
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 1.875rem 0 1.5625rem;
+}
+.inputBox{
+    position: relative;
+    width: 350px;
+}
+.inputBox input{
+    width: 100%;
+    padding: .625rem 1.25rem;
+    border: 1px solid #2E2F46;
+    outline: 0;
+    color: #fff;
+    background: transparent;
+    border-radius: 8px;
+}
+.inputBox input::placeholder{
+    font-size: .75rem;
+    color: #C1C1C1;
+}
+.btnForm{
+    width: 100%;
+    font-size: .9375rem;
+    font-weight: 600;
+    color: var(--white-color);
+    padding: .9375rem;
+    cursor: pointer;
+
+    border: 0;
+    border-radius: 5px;
+    outline: 0;
+    background: var(--linear-color);
+    box-shadow: var(--neon-btn);
+}
+.formLink{
+    font-size: .75rem;
+    display: flex;
+    justify-content: center;
+    margin: 1.25rem 0 0;
+    color: #C1C1C1;
+    cursor: pointer;
+}
+.formLink.pass{
+    margin-bottom: 1.25rem;
+}
+.formLink:hover{
+    text-decoration: underline;
+}
