@@ -36,11 +36,18 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + '/html/index.html')
 })
 
+const routes = [
+    { name: ["/", "/home"], path: "/html/index.html" },
+    { name: ["/register", "/login"], path: "/html/pages/login.html" },
+]
 // app.get -> "Pegar, Obter"
 // app.post -> "Postar"
 // app.delete -> "Deletar"
 // app.put -> "Criar"
 // app.patch -> "Editar"
+
+for (const route of routes)
+    app.get(route.name, (_, res) => res.sendFile(__dirname + route.path))
 
 app.listen(8080, '0.0.0.0', error => {
     if(error) return console.log(error)
