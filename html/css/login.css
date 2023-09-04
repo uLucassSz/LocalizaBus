@@ -43,7 +43,7 @@
 }
 .inputBox{
     position: relative;
-    width: 350px;
+    max-width: 350px;
 }
 .inputBox input{
     width: 100%;
@@ -85,4 +85,10 @@
 }
 .formLink:hover{
     text-decoration: underline;
+}
+
+@media (max-width: 380px){
+    .login-box{
+        padding: 1.25rem 1.5625rem;
+    }
 }
