@@ -24,3 +24,64 @@
 body{
     background: var(--bg-color);
 }
+
+li{
+    list-style: none;
+}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+.logo{
+    font-family: 'Pacifico', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #fff;
+    font-size: 1.5625rem;
+}
+.logo .bx{
+    font-size: 1.5625rem;
+    background: linear-gradient(#293FFF, #091ED7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5625rem 0;
+}
+.btn-actions{
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.btn-actions img{
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #3926e3;
+    z-index: 2;
+}
+.btn-actions span{
+    position: relative;
+    z-index: 1;
+    right: 8px;
+    background-color: #151732;
+    font-size: .9375rem;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 0 5px 5px;
+    padding: 5px 15px 5px 15px;
+}
+
+@media (max-width: 1210px) {
+    .container{
+        width: 90%;
+    }
+}
