@@ -90,6 +90,7 @@ nav{
     padding: .625rem 1.5625rem;
     border-radius: 10px;
     font-size: 1rem;
+    cursor: pointer;
 }
 .sub-profile-wrapper{
     display: none;
@@ -109,11 +110,11 @@ nav{
     transition: background 300ms linear;
 }
 .profile-box:hover, 
-.profile-box:hover a{
+.profile-box:hover .profile-link{
     background: #1a1c38;
     color: #fff;
 }
-.profile-box a{
+.profile-box .profile-link{
     color: #C1C1C1;
     text-decoration: none;
     transition: color 300ms;
