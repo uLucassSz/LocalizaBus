@@ -4,6 +4,8 @@ import connectDatabase from "./database/connect.js"
 import database from "./database/model.js"
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
+import getUser from "./database/get.js"
+import register from "./database/register.js"
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
@@ -34,6 +36,25 @@ app.put("/user", async (req, res) => {
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + '/html/index.html')
+})
+
+app.post("/register", async (req, res) => {
+
+    const { user, password, email } = req.body
+    if (!user || !email || !password) return res.json({ message: "Missing content" })
+
+    const account = await database.findOne({ $or: [{ name: user }, { email }] })
+    if (account?.name == user) return res.json({ message: "O nome de usuário já está em uso." })
+    if (account?.email == email) return res.json({ message: "O email já está em uso." })
+
+    const data = await register(user, password, email)
+    return res.json(data)
+})
+
+app.get("/getlogin", async (req, res) => {
+    const { user, password } = req.headers
+    const account = await getUser(user, password)
+    return res.json(account)
 })
 
 const routes = [
