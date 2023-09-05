@@ -1,7 +1,6 @@
 navbar = document.getElementById("navbar");
 
-navbar.innerHTML = `
-<span class="logo"><i class="bx bxs-bus"> </i>Localiza Bus</span>
+navbar.innerHTML = `<span class="logo"><i class="bx bxs-bus"> </i>Localiza Bus</span>
 
 <div class="btn-actions">
     <div onclick="showProfileWrapper()" class="profile">
@@ -31,6 +30,10 @@ navbar.innerHTML = `
     </div>
 </div>`
 
+footer = document.getElementById('footer');
+
+footer.innerHTML = `© Todos os direitos reservados, 2023 - Localiza Bus`
+
 function showUserName() {
     const userData = JSON.parse(localStorage.getItem('Login'));
 
@@ -40,7 +43,6 @@ function showUserName() {
     }
 }
 
-
 const btnJoin = document.querySelector('.btn-join')
 const profile = document.querySelector('.profile')
 const profileWrapper = document.querySelector(".sub-profile-wrapper");
@@ -48,6 +50,7 @@ const profileWrapper = document.querySelector(".sub-profile-wrapper");
 function showProfileWrapper(){
     profileWrapper.classList.toggle('active')
 }
+
 document.addEventListener('DOMContentLoaded', function () {
     const loggedIn = localStorage.getItem('Login');
 

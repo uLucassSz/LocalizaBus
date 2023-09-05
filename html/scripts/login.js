@@ -36,23 +36,22 @@ function tradeLogin() {
 }
 
 async function register() {
-    
-const user = document.getElementById("user").value
-const password = document.getElementById("password").value
-const email = document.getElementById("email").value
+    const user = document.getElementById("user").value
+    const password = document.getElementById("password").value
+    const email = document.getElementById("email").value
 
-return fetch("https://localizabus.discloud.app/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ user, password, email })
-    })
-        .then(res => res.json())
-        .then(data => {
-            if(data.message) return // Falar pro user que deu ruin
-            localStorage.setItem('Login', JSON.stringify(data))
-            return logged(data)
+    return fetch("https://localizabus.discloud.app/register", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ user, password, email })
         })
-        .catch(console.log)
+            .then(res => res.json())
+            .then(data => {
+                if(data.message) return // Falar pro user que deu ruin
+                localStorage.setItem('Login', JSON.stringify(data))
+                return logged(data)
+            })
+            .catch(console.log)
 }
 
 async function login() {
