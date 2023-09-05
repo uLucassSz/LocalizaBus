@@ -77,5 +77,5 @@ async function login() {
  */
 async function logged(data) {
     // Mudar o HTML com o Login
-    location.href = "https://saphire.one"
+    location.href = "https://localizabus.discloud.app/"
 }
