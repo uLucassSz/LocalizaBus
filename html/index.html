@@ -51,8 +51,8 @@
     <script>
         const linhasContainer = document.querySelector('.linhas-container');
 
-        const linhasHTML = linhas.map((linha) => `
-            <div class="linha-box">
+        const linhasHTML = linhas.map((linha, index) => `
+            <div class="linha-box" data-index="${index}">
                 <i class="bx bxs-bus"></i>
                 <div class="line"></div>
                 <div class="content">
@@ -61,8 +61,20 @@
                 </div>
             </div>
         `).join('');
-
         linhasContainer.innerHTML = linhasHTML;
+
+        const linhaBox = document.querySelectorAll('.linha-box');
+
+        linhaBox.forEach((box) => {
+            box.addEventListener('click', goDetails);
+        });
+
+        function goDetails(event) {
+            const index = event.currentTarget.getAttribute('data-index');
+            
+            const linhaSelecionada = linhas[index];
+            window.location.href = `pages/linhas.html?linha=${index}`;
+        }
     </script>
 </body>
 </html>
