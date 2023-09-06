@@ -1,6 +1,6 @@
 navbar = document.getElementById("navbar");
 
-navbar.innerHTML = `<span class="logo"><i class="bx bxs-bus"> </i>Localiza Bus</span>
+navbar.innerHTML = `<a href="https://localizabus.discloud.app" class="logo"><i class="bx bxs-bus"> </i>Localiza Bus</a>
 
 <div class="btn-actions">
     <div onclick="showProfileWrapper()" class="profile">
