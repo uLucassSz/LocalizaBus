@@ -60,12 +60,8 @@ app.get("/getlogin", async (req, res) => {
 const routes = [
     { name: ["/", "/home"], path: "/html/index.html" },
     { name: ["/register", "/login"], path: "/html/pages/login.html" },
+    { name: ["/linhas", "/linhas"], path: "/html/pages/linhas.html" },
 ]
-// app.get -> "Pegar, Obter"
-// app.post -> "Postar"
-// app.delete -> "Deletar"
-// app.put -> "Criar"
-// app.patch -> "Editar"
 
 for (const route of routes)
     app.get(route.name, (_, res) => res.sendFile(__dirname + route.path))

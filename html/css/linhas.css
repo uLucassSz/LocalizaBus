@@ -1,0 +1,65 @@
+.infoLinha{
+    padding: 2.8125rem;
+}
+.title{
+    background: var(--box-color);
+    padding: .9375rem;
+    width: 100%;
+    margin: 1.5625rem 0 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.title h5{
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white-color);
+    margin: 0 auto;
+}
+.title button{
+    background: transparent;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: .875rem;
+    color: var(--color-primary);
+    font-weight: 400;
+    cursor: pointer;
+}
+.title button:hover{
+    text-decoration: underline;
+}
+
+.date-clock h6{
+    font-size: .875rem;
+    color: var(--color-primary);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.hours{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: .9375rem 0;
+}
+.hour{
+    padding: .5rem 1rem;
+    background: #1B1C35;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.25);
+    width: fit-content;
+    color: var(--white-color);
+    font-weight: 500;
+}
+.hour.active{
+    background: var(--linear-color);
+    box-shadow: var(--neon-btn);
+}
+.barrier{
+    width: 100%;
+    height: 1px;
+    margin: 1.5625rem 0;
+    background: #1B1C35;
+}

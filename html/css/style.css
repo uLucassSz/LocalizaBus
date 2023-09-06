@@ -283,6 +283,24 @@ footer{
     }
 }
 
+@media (max-width: 500px) {
+    .home img{
+        width: 450px;
+    }
+    .premium img{
+        width: 450px;
+    }
+}
+
+@media (max-width: 420px) {
+    .home img{
+        width: 400px;
+    }
+    .premium img{
+        width: 400px;
+    }
+}
+
 @media(max-width: 400px) {
     .logo{
         display: none;

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localiza Bus</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+
+    <!-- Import - CSS GLOBAL -->
+    <link rel="stylesheet" href="../../css/login.css">
+
+    <!-- Import - CSS LOGIN -->
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box register">
+            <div class="heading">
+                <h4>CADASTRAR</h4>
+                <p>Cadastre-se agora para aproveitar todos os benefícios!</p>
+            </div>
+
+            <form>
+                <div class="inputContainer">
+                    <div class="inputBox">
+                        <input placeholder="Digite seu endereço de e-mail" type="email" id='email' />
+                    </div>
+                    <div class="inputBox">
+                        <input placeholder="Digite seu nome" type="text" id='user' />
+                    </div>
+                    <div class="inputBox">
+                        <input placeholder="Digite sua senha" type="password" id='password' />
+                    </div>
+                </div>
+
+                <button type='submit' class='btnForm'>CADASTRAR</button>
+                <span class='formLink' onclick="showLogin()">Já possui uma conta?</span>
+            </form>
+        </div>
+
+        <div class="login-box login">
+            <div class="heading">
+                <h4>ENTRAR</h4>
+                <p>Entre agora e continue desfrutando  de todos os benefícios!</p>
+            </div>
+
+            <form>
+                <div class="inputContainer">
+                    <div class="inputBox">
+                        <input placeholder="Digite seu nome" type="text" id='user' />
+                    </div>
+                    <div class="inputBox">
+                        <input placeholder="Digite sua senha" type="password" id='password' />
+                    </div>
+                </div>
+                
+                <span class='formLink pass'>Esqueceu sua senha?</span>
+                <button type='submit' class='btnForm'>ENTRAR</button>
+                <span class='formLink' onclick="showRegister()">Ainda não possui uma conta?</span>
+            </form>
+        </div>
+      </div>
+
+      <script src="script.js"></script>
+</body>
+</html>
