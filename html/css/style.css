@@ -299,6 +299,9 @@ footer{
     .premium img{
         width: 400px;
     }
+    .infoLinha .title{
+        flex-direction: column;
+    }
 }
 
 @media(max-width: 400px) {
