@@ -1,18 +1,3 @@
-const linhasContainer = document.querySelector('.linhas-container');
-
-const linhasHTML = linhas.map((linha) => `
-    <div class="linha-box">
-        <i class="bx bxs-bus"></i>
-        <div class="line"></div>
-        <div class="content">
-            <h4 class="name">${linha.name}</h4>
-            <span>${linha.street}</span>
-        </div>
-    </div>
-`).join('');
-
-linhasContainer.innerHTML = linhasHTML;
-
 const linhas = [
     {
         id: 1,
