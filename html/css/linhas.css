@@ -75,3 +75,52 @@
     margin: 1.5625rem 0;
     background: #1B1C35;
 }
+.locate-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 30;
+}
+.locate-box #map{
+    display: none;
+    margin-top: 1.25rem;
+    border-radius: 8px;
+}
+.locate-wrapper.active{
+    display: flex;
+}
+body.box-active{
+    overflow-y: hidden;
+}
+.locate-box{
+    position: relative;
+    background: var(--box-color);
+    border-radius: 22px;
+    padding: 45px;
+    max-width: 855px;
+    width: 100%;
+    z-index: 30;
+}
+.locate-box .closeIcon{
+    position: absolute;
+    color: var(--white-color);
+    font-size: 1.875rem;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+.bus-icon{
+    color: var(--color-primary);
+    font-size: 2rem;
+    transition: transform 1s linear;
+}
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+  display: none !important;
+}

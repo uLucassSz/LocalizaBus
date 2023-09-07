@@ -281,6 +281,12 @@ footer{
     .premium{
         flex-direction: column;
     }
+    .infoLinha .title{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
 }
 
 @media (max-width: 500px) {

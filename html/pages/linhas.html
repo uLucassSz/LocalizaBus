@@ -12,6 +12,12 @@
     <!-- Import - CSS LINHAS -->
     <link rel="stylesheet" href="../css/linhas.css">
 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.12/leaflet-routing-machine.min.js" integrity="sha512-FW2A4pYfHjQKc2ATccIPeCaQpgSQE1pMrEsZqfHNohWKqooGsMYCo3WOJ9ZtZRzikxtMAJft+Kz0Lybli0cbxQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.12/leaflet-routing-machine.css" integrity="sha512-eD3SR/R7bcJ9YJeaUe7KX8u8naADgalpY/oNJ6AHvp1ODHF3iR8V9W4UgU611SD/jI0GsFbijyDBAzSOg+n+iQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Import - BoxIcons --> 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -25,7 +31,7 @@
         </div>
 
         <div class="title">
-            <button>Rastrear</button>
+            <button onclick="showMap()">Rastrear</button>
             <h5>Bela Vista para estação</h5>
             <select> 
                 <option value="" selected>Bela Vista para estação</option>
@@ -62,12 +68,18 @@
                 </div>
             </div>
         </div>
-
-
     </section>
+
+    <div class="locate-wrapper">
+        <div class="locate-box">
+            <i onclick="closeMap()" class="bx bx-x closeIcon"></i>
+            <div id="map" style="width: 100%; height: 400px;"></div>
+        </div>
+    </div>
 
     <footer id="footer"></footer>
 
+    <script src="../mapa.js"></script>
     <script src="../script.js"></script>
     <script src="../scripts/data.js"></script>
     <script>
