@@ -12,9 +12,11 @@
     <!-- Import - CSS LINHAS -->
     <link rel="stylesheet" href="../css/linhas.css">
 
+    <!-- Import - Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
+    <!-- Import - Leaflet Routing -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.12/leaflet-routing-machine.min.js" integrity="sha512-FW2A4pYfHjQKc2ATccIPeCaQpgSQE1pMrEsZqfHNohWKqooGsMYCo3WOJ9ZtZRzikxtMAJft+Kz0Lybli0cbxQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.12/leaflet-routing-machine.css" integrity="sha512-eD3SR/R7bcJ9YJeaUe7KX8u8naADgalpY/oNJ6AHvp1ODHF3iR8V9W4UgU611SD/jI0GsFbijyDBAzSOg+n+iQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -22,39 +24,46 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+    <div class="locate-wrapper">
+        <div class="locate-box">
+            <i onclick="closeMap()" class="bx bx-x closeIcon"></i>
+            <div id="map" style="width: 100%; height: 400px;"></div>
+        </div>
+    </div>
+
     <nav class="container" id="navbar"></nav>
 
     <section class="infoLinha container">
         <div class="heading">
             <small>INFORMAÇÕES</small>
-            <h5>Linha 01 | Bela Vista - Rodoviária</h5>
+            <h5 id="titulo_rua">Linha 01 | Bela Vista - Rodoviária</h5>
         </div>
 
         <div class="title">
             <button onclick="showMap()">Rastrear</button>
-            <h5>Bela Vista para estação</h5>
-            <select> 
-                <option value="" selected>Bela Vista para estação</option>
-                <option value="">Estação para Bela Vista</option>
-                <option value="">Estação para rodoviária</option>
-                <option value="">Copacabana para estação</option>
-                <option value="">Estação para Copacabana</option>
-                <option value="">Estação para Vila Paulista</option>
-                <option value="">Vila Paulista para estação</option>
+            <h5 id="titulo_linha">Bela Vista para estação</h5>
+            <select id="select" onchange="changeRoutes(this)">
+                <!-- <option value="1" selected>Bela Vista para estação</option>
+                <option value="2">Estação para Bela Vista</option>
+                <option value="3">Estação para rodoviária</option>
+                <option value="4">Copacabana para estação</option>
+                <option value="5">Estação para Copacabana</option>
+                <option value="6">Estação para Vila Paulista</option>
+                <option value="7">Vila Paulista para estação</option> -->
             </select>
         </div>
 
         <div class="horarios" id="linhas">
-            <div class="date-clock">
+            <!-- <div class="date-clock">
                 <h6>SEGUNDA - SEXTA</h6>
                 <div class="hours">
                     <div class="hour">05:35</div>
                 </div>
             </div>
     
-            <div class="barrier"></div>
+            <div class="barrier"></div> -->
     
-            <div class="date-clock">
+            <!-- <div class="date-clock">
                 <h6>SÁBADOS</h6>
                 <div class="hours">
                     <div class="hour">05:35</div>
@@ -66,23 +75,15 @@
                 <div class="hours">
                     <div class="hour">05:35</div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
-    <div class="locate-wrapper">
-        <div class="locate-box">
-            <i onclick="closeMap()" class="bx bx-x closeIcon"></i>
-            <div id="map" style="width: 100%; height: 400px;"></div>
-        </div>
-    </div>
-
     <footer id="footer"></footer>
 
-    <script src="../mapa.js"></script>
+    <script src="../scripts/mapa.js"></script>
     <script src="../script.js"></script>
     <script src="../scripts/data.js"></script>
-    <script>
-    </script>
+    <script src="../scripts/routes.js"></script>
 </body>
 </html>

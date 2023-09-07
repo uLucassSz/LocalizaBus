@@ -1,6 +1,4 @@
-.infoLinha{
-    padding: 2.8125rem;
-}
+
 .title{
     background: var(--box-color);
     padding: .9375rem;
@@ -11,6 +9,7 @@
     justify-content: space-between;
 }
 .title select{
+    cursor: pointer;
     background: transparent;
     border: 1px solid #292d59;
     border-radius: 8px;
@@ -57,11 +56,14 @@
     margin: .9375rem 0;
 }
 .hour{
+    max-width: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     padding: .5rem 1rem;
     background: #1B1C35;
     border-radius: 5px;
     box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.25);
-    width: fit-content;
     color: var(--white-color);
     font-weight: 500;
 }
