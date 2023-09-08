@@ -287,8 +287,19 @@ footer{
         justify-content: center;
         gap: 15px;
     }
+    .settings-content{
+        flex-direction: column;
+    }
 }
 
+@media (max-width: 450px) {
+    .payment-box .name,
+    .payment-box .details{
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+}
 @media (max-width: 500px) {
     .home img{
         width: 450px;

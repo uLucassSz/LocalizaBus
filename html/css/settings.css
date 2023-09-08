@@ -1,0 +1,258 @@
+.barrier{
+    width: 100%;
+    height: 1px;
+    background: #1B1C35;
+    margin: .9375rem 0;
+}
+.settings-content{
+    display: flex;
+    gap: 50px;
+}
+.sidebar{
+    max-width: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-link{
+    padding: .625rem .9375rem;
+    max-width: 250px;
+    text-align: left;
+    font-size: .9375rem;
+    font-weight: 500;
+    color: var(--white-color);
+    background: var(--bg-color);
+    width: 100%;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+.sidebar-link.active{
+    border-left: 3px solid var(--color-primary);
+    background: #141528;
+}
+.settings-profile, .settings-payments{
+    display: none;
+}
+.settings-profile.active, .settings-payments.active{
+    display: block;
+}
+.settings-profile .photo img{
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.settings-profile .profile-content{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.settings-profile .photo{
+    position: relative;
+    cursor: pointer;
+}
+.settings-profile .photo .bx{
+    position: absolute;
+    right: 2px;
+    bottom: 5px;
+    padding: .3125rem;
+    background: var(--bg-color);
+    border-radius: 50%;
+    font-size: .75rem;
+    color: #fff;
+}
+.profile-content .name span{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white-color);
+}
+.profile-content .name p{
+    font-size: calc(12px + 1px);
+    color: #C1C1C1;
+}
+.settings-profile form{
+    margin-top: 1.875rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.input-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.input-box{
+    max-width: 15.625rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.input-box label{
+    font-size: .75rem;
+    color: var(--white-color);
+    font-weight: 500;
+}
+.input-box select,
+.input-box input{
+    max-width: 15.625rem;
+    width: 100%;
+    background: #1B1C35;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
+    color: var(--white-color);
+    border: 0;
+    outline: 0;
+    padding: .3125rem .625rem;
+    font-size: .875rem;
+}
+.input-box select option{
+    font-size: .875rem;
+}
+.settings-profile form button{
+    border-radius: 5px;
+    background: var(--linear-color);
+    box-shadow: var(--neon-btn);
+    font-size: .875rem;
+    color: var(--white-color);
+    font-weight: 500;
+    padding: .625rem 1.375rem ;
+    width: fit-content;
+    border: 0;
+    outline: 0;
+    transition: opacity 300ms;
+    cursor: pointer;
+}
+.settings-profile form button:hover{
+    opacity: 0.8;
+}
+
+.settings-payments{
+    max-width: 800px;
+    width: 100%;
+}
+.methods-box{
+    background: var(--box-color);
+    border-radius: 8px;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    padding: 1.5625rem 1.875rem;
+}
+.methods-box h5{
+    color: var(--white-color);
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.methods-box .subtitle{
+    font-size: .875rem;
+    font-weight: 500;
+    color: #C1C1C1;
+    margin: .9375rem 0 .625rem;
+}
+.methods{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 25px;
+}
+.method{
+    max-width: 180px;
+    width: 100%;
+    border-radius: 8px;
+    background: #1A1D3F;
+    padding: .625rem .9375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.method img{
+    width: 55px;
+    height: 55px;
+    background: var(--box-color);
+    padding: .625rem;
+    border-radius: 50%;
+}
+.method span{
+    font-size: .875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--white-color);
+    margin: .9375rem 0 .625rem;
+}
+.method button{
+    border: 0;
+    outline: 0;
+    background: var(--linear-color);
+    box-shadow: var(--neon-btn);
+    border-radius: 3px;
+    cursor: pointer;
+    padding: .3125rem;
+    width: 100%;
+    font-size: .875rem;
+    color: var(--white-color);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.add-method{
+    margin-top: 25px;
+    font-size: .875rem;
+    color: var(--white-color);
+    font-weight: 600;
+    border: 0;
+    outline: 0;
+    text-transform: uppercase;
+    padding: .625rem .9375rem;
+    background: var(--linear-color);
+    box-shadow: var(--neon-btn);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.payments{
+    margin-top: 2.5rem;
+}
+.payments small{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-primary);
+}
+.payments-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: .9375rem;
+}
+.payment-box{
+    max-width: 600px;
+    width: 100%;
+    background: var(--box-color);
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: .9375rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.payment-box .name,
+.payment-box .details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.payment-box .name span{
+    font: 400 1rem 'Righteous', sans-serif;
+    color: var(--white-color);
+}
+.payment-box .name h4{
+    font-size: 1.125rem;
+    color: var(--color-primary);
+}
+.payment-box .details p{
+    font-size: .875rem;
+    color: var(--white-color);
+}
+.payment-box .details p span{
+    color: #C1C1C1;
+}

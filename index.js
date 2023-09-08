@@ -60,7 +60,8 @@ app.get("/getlogin", async (req, res) => {
 const routes = [
     { name: ["/", "/home"], path: "/html/index.html" },
     { name: ["/register", "/login"], path: "/html/pages/login.html" },
-    { name: ["/linhas", "/linhas"], path: "/html/pages/linhas.html" },
+    { name: ["/linha", "/linhas"], path: "/html/pages/linhas.html" },
+    { name: ["/settings", "/configuracao"], path: "/html/pages/settings.html" },
 ]
 
 for (const route of routes)

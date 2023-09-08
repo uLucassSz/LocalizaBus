@@ -12,7 +12,7 @@ navbar.innerHTML = `<a href="https://localizabus.discloud.app" class="logo"><i c
     <div class="sub-profile-wrapper">
         <div class="profile-wrapper">
             <div class="profile-box">
-                <a href="#" class="profile-link">Configurações</a>
+                <a href="https://localizabus.discloud.app/settings" class="profile-link">Configurações</a>
             </div>
             <div class="profile-box">
                 <a href="#" class="profile-link">Pagamentos</a>
@@ -65,6 +65,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function logout() {
+    location.href = location.origin
+    
     profileWrapper.classList.remove('active');
 
     localStorage.removeItem('Login');
