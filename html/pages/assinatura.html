@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select>
+        <option value="endereco">Endereco</option>
+        <option value="newEndereco">Novo Endereço</option>
+    </select>
+
+    <input type="text" style="display: none;">
+
+
+    <script>
+        const select = document.querySelector('select');
+        const input = document.querySelector('input');
+
+        select.addEventListener('change', () => {
+            const selectOption = select.value;
+
+            if(selectOption === 'endereco') { // se a option tiver o valor de endereco
+                input.style.display = 'none' // vai sumir o input
+            } else {
+                input.style.display = 'block' // caso contrário, o input vai aparecer
+            }
+        })
+    </script>
+</body>
+</html>

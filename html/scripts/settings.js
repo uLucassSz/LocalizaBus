@@ -1,35 +1,3 @@
-const inputCEP = document.getElementById('inputCEP');
-const inputEndereco = document.getElementById('inputEndereco');
-const inputComplemento = document.getElementById('inputComplemento');
-
-inputCEP.addEventListener('input', () => {
-    let cep = inputCEP.value.replace(/\D/g, '');
-
-    if (cep.length > 5) {
-        cep = cep.substring(0, 5) + '-' + cep.substring(5);
-    }
-
-
-    if (cep.length === 9) {
-        fetch(`https://viacep.com.br/ws/${cep}/json/`)
-            .then(response => response.json())
-            .then(data => {
-                if (!data.erro) {
-                    inputEndereco.value = data.logradouro;
-                } else {
-                    inputEndereco.value = '';
-                    inputComplemento.value = '';
-                }
-            })
-            .catch(error => {
-                console.error('Erro ao buscar CEP:', error);
-            });
-    } else {
-        inputEndereco.value = '';
-        inputComplemento.value = '';
-    }
-});
-
 const inputCPF = document.getElementById('inputCPF');
 const inputTel = document.getElementById('inputTel');
 

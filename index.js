@@ -62,6 +62,7 @@ const routes = [
     { name: ["/register", "/login"], path: "/html/pages/login.html" },
     { name: ["/linha", "/linhas"], path: "/html/pages/linhas.html" },
     { name: ["/settings", "/configuracao"], path: "/html/pages/settings.html" },
+    { name: ["/assinatura"], path: "/html/pages/assinatura.html" },
     { name: ["/buspremium", "/comprar"], path: "/html/pages/buy.html" },
 ]
 
