@@ -94,7 +94,6 @@
     color: var(--white-color);
     font-weight: 500;
 }
-.input-box select,
 .input-box input{
     max-width: 15.625rem;
     width: 100%;
@@ -107,8 +106,10 @@
     padding: .3125rem .625rem;
     font-size: .875rem;
 }
-.input-box select option{
-    font-size: .875rem;
+.input-box input[type="date"]::-webkit-inner-spin-button,
+.input-box input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
 }
 .settings-profile form button{
     border-radius: 5px;

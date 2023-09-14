@@ -37,3 +37,13 @@ function toggleMethod(element){
 
     element.classList.add('active');
 }
+
+const inputNumber = document.getElementById('inputNumber');
+
+inputNumber.addEventListener('input', () => {
+    const valor = inputNumber.value;
+
+    if (valor <= 0) {
+        inputNumber.value = '';
+    }
+})
