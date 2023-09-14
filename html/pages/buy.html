@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localiza Bus</title>
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+
+    <!-- Import - CSS GLOBAL -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Import - CSS BUY -->
+    <link rel="stylesheet" href="../css/buy.css">
+
+    <!-- Import - BoxIcons --> 
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav class="container" id="navbar"></nav>
+
+    <section class="buy container">
+        <div class="buy-title">
+            <h3>Assinatura BusPremium</h3>
+            <span>R$ 100,00 <small>/ por mês</small></span>
+        </div>
+
+        <h5 class="buyHeading">Informações pessoais</h5>
+
+        <form>
+            <div class="inputBox">
+                <label>Nome</label>
+                <input type="text">
+            </div>
+            <div class="inputBox">
+                <label>Sobrenome</label>
+                <input type="text">
+            </div>
+            <div class="inputBox">
+                <label>CEP</label>
+                <input type="text" id="cep">
+            </div>
+            <div class="inputBox">
+                <label>Endereço</label>
+                <input type="text" id="endereco">
+            </div>
+            <div class="inputBox">
+                <label>Bairro</label>
+                <input type="text" id="bairro">
+            </div>
+            <div class="inputBox">
+                <label>Complemento</label>
+                <input type="text">
+            </div>
+
+        </form>
+        <div class="method-heading">
+            <h5 class="buyHeading">Detalhes do pagamento</h5>
+            <p class="method-title">Selecione de como deseja pagar</p>
+            <small class="method-small">OBS: Caso não mostre nenhum método de pagamento,  você precisa cadastrar um método de pagamento nas configurações.</small>
+        </div>
+
+        <div class="methods">
+            <div onclick="toggleMethod(this)" class="method active">
+                <img src="../assets/mp.png" alt="">
+                <div class="content">
+                    <span>Mercado Pago</span>
+                    <p>Pix, Boleto, Cartão de crédito, Saldo</p>
+                </div>
+            </div>
+            <div onclick="toggleMethod(this)" class="method">
+                <img src="../assets/pp.png" alt="">
+                <div class="content">
+                    <span>PayPal</span>
+                    <p>Cartão de crédito, Saldo</p>
+                </div>
+            </div>
+        </div>
+
+        <p class="terms">Clique <a href="#">aqui</a> para ler os termos</p>
+
+        <button class="buy-btn">Pagar</button>
+    </section>
+    
+    <footer class="container" id="footer"></footer>
+
+    <script src="../scripts/buy.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

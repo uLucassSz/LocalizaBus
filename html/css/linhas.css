@@ -67,10 +67,6 @@
     color: var(--white-color);
     font-weight: 500;
 }
-.hour.active{
-    background: var(--linear-color);
-    box-shadow: var(--neon-btn);
-}
 .barrier{
     width: 100%;
     height: 1px;

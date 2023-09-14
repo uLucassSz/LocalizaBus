@@ -6,10 +6,10 @@
     <title>Localiza Bus</title>
     <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
 
-    <!-- Import - CSS GLOBAL -->
+    <!-- Import - CSS SETTINGS -->
     <link rel="stylesheet" href="../css/settings.css">
 
-    <!-- Import - CSS LOGIN -->
+    <!-- Import - CSS GLOBAL -->
     <link rel="stylesheet" href="../css/style.css">
 
     <!-- Import - BoxIcons --> 
@@ -30,6 +30,7 @@
             <div class="sidebar">
                 <button class="sidebar-link active">Informações pessoais</button>
                 <button class="sidebar-link">Pagamentos</button>
+                <button onclick="window.location.href = './assinatura.html'" class="sidebar-link">Assinatura</button>
                 <button onclick="logout()" class="sidebar-link">Sair</button>
             </div>
 
@@ -109,11 +110,6 @@
                         <div class="method">
                             <img src="../assets/pp.png" alt="">
                             <span>PayPal</span>
-                            <button>Editar</button>
-                        </div>
-                        <div class="method">
-                            <img src="../assets/pix.png" alt="">
-                            <span>PIX</span>
                             <button>Editar</button>
                         </div>
                     </div>

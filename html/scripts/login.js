@@ -47,7 +47,7 @@ async function register() {
         })
             .then(res => res.json())
             .then(data => {
-                if(data.message) return // Falar pro user que deu ruin
+                if(data.message) return // Falar pro user que deu ruim
                 localStorage.setItem('Login', JSON.stringify(data))
                 return logged(data)
             })

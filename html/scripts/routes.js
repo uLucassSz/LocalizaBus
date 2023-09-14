@@ -22,6 +22,5 @@ function changeRoutes(doc) {
 
     div.innerHTML = Object.entries(local.hours)
     .map(([day, hours]) => `<div class="date-clock"><h6>${day}</h6><div class="hours">${hours
-        .map(h =>`<div class="hour">${h}</div>`).join("")}</div></div>`).join("<div class='barrier'></div>")
-
+        .map(h =>`<div class="hour" data-horario='${h}'>${h}</div>`).join("")}</div></div>`).join("<div class='barrier'></div>")
 }

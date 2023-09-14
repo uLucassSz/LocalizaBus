@@ -1,0 +1,131 @@
+.buy-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--box-color);
+    border-radius: 5px;
+    padding: .9375rem 1.875rem;
+}
+.buy-title h3{
+    color: var(--white-color);
+    font: 400 1.25rem 'Righteous', sans-serif;
+}
+.buy-title span{
+    color: var(--color-primary);
+    font-size: 1.5625rem;
+    font-weight: 600;
+}
+.buy-title small{
+    font-size: calc(12px + 1px);
+    color: #555556;
+    font-weight: 500;
+}
+.buyHeading{
+    color: var(--white-color);
+    font: 400 1.25rem 'Righteous', sans-serif;
+    margin: 1.875rem 0 .9375rem;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-width: 320px;
+    width: 100%;
+}
+.inputBox label{
+    font-size: .875rem;
+    color: var(--white-color);
+    font-weight: 500;
+}
+.inputBox input{
+    background: #1B1C35;
+    border: 0;
+    border-radius: 3px;
+    outline: 0;
+    font-size: .875rem;
+    color: var(--white-color);
+    padding: .625rem .9375rem;
+}
+
+.method-heading{
+    display: flex;
+    flex-direction: column;
+}
+.method-title{
+    font-size: .875rem;
+    font-weight: 500;
+    color: var(--white-color);
+}
+.method-small{
+    font-size: .75rem;
+    color: #C1C1C1;
+    margin-top: .3125rem;
+}
+.methods{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 1.25rem;
+}
+.method{
+    background: var(--box-color);
+    border-radius: 5px;
+    padding: .9375rem 1.5625rem;
+    max-width: 350px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    cursor: pointer;
+}
+.method.active{
+    border: 2px solid #293FFF;
+    box-shadow: 1px 1px 10px 2px rgba(72, 89, 242, 0.25);
+}
+.method img{
+    width: 55px;
+    height: 55px;
+    background: var(--bg-color);
+    padding: .625rem;
+    border-radius: 50%;
+}
+.method .content span{
+    font-size: .9375rem;
+    font-weight: 500;
+    color: var(--white-color);
+    margin-bottom: 3px;
+}
+.method .content p{
+    font-size: .75rem;
+    color: #C1C1C1;
+}
+.terms{
+    margin: 1.875rem 0;
+    font-size: 1rem;
+    color: var(--white-color);
+}
+.terms a{
+    text-decoration: underline;
+}
+
+.buy-btn{
+    border-radius: 5px;
+    background: linear-gradient(236deg, #374BFE -3.3%, #293FFF 71.68%);
+    box-shadow: 1px 1px 10px 2px rgba(72, 89, 242, 0.35);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white-color);
+    text-transform: uppercase;
+    padding: .9375rem 2.1875rem;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
