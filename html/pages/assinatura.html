@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/style.css">
 
     <!-- Import - CSS BUY -->
-    <link rel="stylesheet" href="../css/buy.css">
+    <link rel="stylesheet" href="../css/signature.css">
 
     <!-- Import - BoxIcons --> 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -25,13 +25,33 @@
         <option value="newEndereco">Novo Endereço</option>
     </select>
 
+    <div class="colors">
+        <div onclick="toggleColor(this)" data-color="roxo" class="color roxo active"></div>
+        <div onclick="toggleColor(this)" data-color="branco" class="color branco"></div>
+        <div onclick="toggleColor(this)" data-color="preto" class="color preto"></div>
+
+        <p>Color selecionada: <span id="color">Roxo</span></p>
+    </div>
+
     <input type="text" style="display: none;">
 
     <footer class="container" id="footer"></footer>
 
     <script>
 
-        if (localStorage.getItem("Login") === null) window.location.href = "https://localizabus.discloud.app/"
+        function toggleColor(element) {
+            const cor = element.getAttribute('data-color');
+            const colorSpan = document.getElementById('color');
+
+            colorSpan.textContent = cor.charAt(0).toUpperCase() + cor.slice(1);
+            
+            const colors = document.querySelectorAll('.color')
+
+            colors.forEach(color => color.classList.remove('active'));
+            element.classList.add('active')
+        }
+
+        // if (localStorage.getItem("Login") === null) window.location.href = "https://localizabus.discloud.app/"
     
         let target = JSON.parse(localStorage.getItem("Login"))
         if(!target.signature) window.location.href = "https://localizabus.discloud.app/"
@@ -48,6 +68,9 @@
                 input.style.display = 'block' // caso contrário, o input vai aparecer
             }
         })
+
+
+
     </script>
     <script src="../script.js"></script>
 </body>
