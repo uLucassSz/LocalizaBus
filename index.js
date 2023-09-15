@@ -47,7 +47,7 @@ app.post("/register", async (req, res) => {
     if (account?.name == user) return res.json({ message: "O nome de usuário já está em uso." })
     if (account?.email == email) return res.json({ message: "O email já está em uso." })
 
-    const data = await register(user, password, email)
+    const data = await register(user, password, email, false)
     return res.json(data)
 })
 

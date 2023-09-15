@@ -1,8 +1,8 @@
 import user from "./model.js"
 
-export default async (name, password, email) => {
+export default async (name, password, email, signature) => {
 
-    const account = new user({ email, name, password })
+    const account = new user({ email, name, password, signature})
         .save()
         .then(doc => doc.toObject())
         .catch(err => {

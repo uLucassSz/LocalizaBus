@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Localiza Bus</title>
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+
+    <!-- Import - CSS GLOBAL -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Import - CSS BUY -->
+    <link rel="stylesheet" href="../css/buy.css">
+
+    <!-- Import - BoxIcons --> 
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
+    <nav class="container" id="navbar"></nav>
+
     <select>
         <option value="endereco">Endereco</option>
         <option value="newEndereco">Novo Endereço</option>
@@ -13,20 +27,29 @@
 
     <input type="text" style="display: none;">
 
+    <footer class="container" id="footer"></footer>
 
     <script>
+
+        if (localStorage.getItem("Login") === null) window.location.href = "https://localizabus.discloud.app/"
+    
+        let target = JSON.parse(localStorage.getItem("Login"))
+        if(!target.signature) window.location.href = "https://localizabus.discloud.app/"
+        
         const select = document.querySelector('select');
         const input = document.querySelector('input');
 
         select.addEventListener('change', () => {
             const selectOption = select.value;
 
-            if(selectOption === 'endereco') { // se a option tiver o valor de endereco
+            if (selectOption === 'endereco') { // se a option tiver o valor de endereco
                 input.style.display = 'none' // vai sumir o input
             } else {
                 input.style.display = 'block' // caso contrário, o input vai aparecer
             }
         })
     </script>
+    <script src="../script.js"></script>
 </body>
+
 </html>

@@ -1,3 +1,5 @@
+if (localStorage.getItem("Login") === null) window.location.href = "https://localizabus.discloud.app/"
+
 const inputCPF = document.getElementById('inputCPF');
 const inputTel = document.getElementById('inputTel');
 
