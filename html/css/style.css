@@ -158,7 +158,7 @@ nav{
 }
 .home-content h4{
     font-family: 'Righteous', sans-serif;
-    font-size: 1.5625rem;
+    font-size: 1.375rem;
     color: var(--white-color);
     font-weight: 400;
 }
@@ -215,6 +215,10 @@ nav{
     align-items: center;
     gap: 55px;
 }
+.premium img{
+    border-radius: 1rem;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.25);
+}
 .premium-content{
     max-width: 600px;
     width: 100%;
@@ -269,8 +273,8 @@ footer{
 }
 
 @media (max-width: 1000px) {
-    .premium img{
-        width: 450px;
+    .premium img, .signature-card img{
+        width: 100%;
     }
 }
 
@@ -304,9 +308,6 @@ footer{
     .home img{
         width: 450px;
     }
-    .premium img{
-        width: 450px;
-    }
 }
 @media (max-width: 550px) {
     .buy-title{
@@ -319,11 +320,12 @@ footer{
     .home img{
         width: 400px;
     }
-    .premium img{
-        width: 400px;
-    }
     .infoLinha .title{
         flex-direction: column;
+    }
+    .andress-input input{
+        max-width: none;
+        width: 100%;
     }
 }
 

@@ -41,8 +41,8 @@
                         <i class="bx bxs-camera"></i>
                     </div>
                     <div class="name">
-                        <span>lucaix</span>
-                        <p>seuemail@gmail.com</p>
+                        <span id="profileName"></span>
+                        <p id="profileEmail"></p>
                     </div>
                 </div>
                 
@@ -50,11 +50,11 @@
                     <div class="input-container">
                         <div class="input-box">
                             <label for="user">Nome de usuário</label>
-                            <input type="text" value="Lucaix">
+                            <input type="text" value="" id="inputName">
                         </div>
                         <div class="input-box">
                             <label for="user">Endereço de e-mail</label>
-                            <input type="email" value="seuemail@gmail.com">
+                            <input type="email" value="" id="inputEmail">
                         </div>
                         <div class="input-box">
                             <label for="user">Data de nascimento</label>
@@ -68,9 +68,12 @@
                             <label for="user">Número de telefone</label>
                             <input type="text" maxlength="15" id="inputTel" value="(19) 99999-9999">
                         </div>
-                        <div class="input-box">
+                        <div class="input-box password">
                             <label for="user">Alterar senha</label>
-                            <input type="password" value="Lucaix">
+                            <div class="input-pass">
+                                <input type="password" class="passwordInput" value="" id="inputPass">
+                                <i class="bx bx-hide eye-icon"></i>
+                            </div>
                         </div>
 
                     </div>
@@ -85,18 +88,18 @@
 
                     <h6 class="subtitle">Métodos adicionados</h6>
                     <div class="methods">
-                        <div class="method">
+                        <div class="method" data-method="Mercado Pago">
                             <img src="../assets/mp.png" alt="">
                             <span>Mercado Pago</span>
-                            <button>Editar</button>
+                            <button onclick="methodEdit(this)">Editar</button>
                         </div>
-                        <div class="method">
+                        <div class="method" data-method="PayPal">
                             <img src="../assets/pp.png" alt="">
                             <span>PayPal</span>
-                            <button>Editar</button>
+                            <button onclick="methodEdit(this)">Editar</button>
                         </div>
                     </div>
-                    <button class="add-method">Adicionar novo método</button>
+                    <button onclick="methodAdd()" class="add-method">Adicionar novo método</button>
                 </div>
 
                 <div class="payments">
@@ -137,6 +140,45 @@
             </div>
         </div>
     </section>
+
+    <div class="methodSettings-wrapper methodAdd">
+        <div class="addMethod">
+            <i class="bx bx-x closeIcon" onclick="closeMethod()"></i>
+            <h3>Adicionar novo método de pagamento</h3>
+
+            <form>
+                <label>Selecione um método de pagamento</label>
+                <div class="input">
+                    <i class="bx bx-chevron-down"></i>
+                    <select>
+                        <option>PicPay</option>
+                        <option>Nubank</option>
+                        <option>PagBank</option>
+                        <option>Digio</option>
+                    </select>
+                </div>
+
+                <button class="btn">Adicionar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="methodSettings-wrapper methodEdit">
+        <div class="addMethod">
+            <i class="bx bx-x closeIcon" onclick="closeMethod()"></i>
+            <h3>Editar método de pagamento</h3>
+
+            <div class="info-list">
+                <span>Método selecionado: <p id="methodValue"></p></span>
+                <span>Usuário cadastrado: <p>lucaix</p></span>
+            </div>
+            <p class="changeAcc">Caso queira trocar de troca, clique <a href="#">aqui</a></p>
+
+            <button class="btn">Editar</button>
+            <button class="btn remove">Remover</button>
+        </div>
+    </div>
+
 
     <footer class="container" id="footer"></footer>
 

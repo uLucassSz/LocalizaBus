@@ -1,3 +1,21 @@
+// VIEW PASSWORD
+const pwShowHide = document.querySelectorAll(".eye-icon");
+
+pwShowHide.forEach(eyeIcon => {
+    eyeIcon.addEventListener("click", () => {
+        let pwFields = eyeIcon.parentElement.parentElement.querySelectorAll(".passwordInput");
+        
+        pwFields.forEach(passowrd => {
+            if(passowrd.type === "password"){
+                passowrd.type = "text";
+                eyeIcon.classList.replace("bx-hide", "bx-show");
+                return;
+            }
+            passowrd.type = "password";
+            eyeIcon.classList.replace("bx-show", "bx-hide");
+        })
+    })
+})
 
 const storage = localStorage.getItem("Login")
 if (storage) logged(storage)

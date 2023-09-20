@@ -41,6 +41,8 @@
 .inputBox{
     position: relative;
     max-width: 350px;
+    display: flex;
+    align-items: center;
 }
 .inputBox input{
     width: 100%;
@@ -54,6 +56,13 @@
 .inputBox input::placeholder{
     font-size: .75rem;
     color: #C1C1C1;
+}
+.inputBox .bx{
+    font-size: 1rem;
+    color: var(--white-color);
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
 }
 .btnForm{
     width: 100%;

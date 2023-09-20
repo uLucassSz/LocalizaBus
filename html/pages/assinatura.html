@@ -20,59 +20,96 @@
 <body>
     <nav class="container" id="navbar"></nav>
 
-    <select>
-        <option value="endereco">Endereco</option>
-        <option value="newEndereco">Novo Endereço</option>
-    </select>
+    <section class="signature container">
+        <div class="heading">
+            <small>ASSINATURA</small>
+            <h5>Informações da sua assinatura</h5>
+        </div>
 
-    <div class="colors">
-        <div onclick="toggleColor(this)" data-color="roxo" class="color roxo active"></div>
-        <div onclick="toggleColor(this)" data-color="branco" class="color branco"></div>
-        <div onclick="toggleColor(this)" data-color="preto" class="color preto"></div>
+        <div class="signature-container">
+            <div class="box">
+                <h3 class="title">Detalhes importantes</h3>
+                <div class="info">
+                    <p>Você possui esta assinatura desde <span>07 de junho de 2023</span></p>
+                    <p>Sua próxima cobrança é <span>06 de agosto de 2023</span></p>
+                </div>
+                <p class="signatureLink">Clique <a href="#">aqui</a> para ver a política de cancelamento.</p>
 
-        <p>Color selecionada: <span id="color">Roxo</span></p>
-    </div>
+                <button class="btn cancel">CANCELAR ASSINATURA</button>
+            </div>
+            <div class="box">
+                <h3 class="title">Informações de pagamento</h3>
+                <div class="info">
+                    <p>Data de vencimento: <span>07 de agosto de 2023</span></p> 
+                    <p>Método de pagamento: <span>Mercado Pago</span></p>
+                </div>
+                <p class="signatureLink">Clique <a href="/settings">aqui</a> para visualizar seu histórico de pagamento.</p>
+
+                <button class="btn">ALTERAR MÉTODO DE PAGAMENTO</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="signature-card container">
+        <img id="imgCard" src="../assets/buspremium.png" alt="">
+        <div class="content">
+            <div class="heading">
+                <small>CARTÃO</small>
+                <h5>Peça seu cartão agora mesmo!</h5>
+            </div>
+            <div class="andress">
+                <div class="input-box">
+                    <label for="select">Endereço</label>
+                    <select name="select">
+                        <option value="endereco">Rua das Flores, 202, 12345-678</option>
+                        <option value="newAndress">Adicionar novo endereço</option>
+                    </select>
+
+                    <div class="andress-input">
+                        <div class="input">
+                            <label for="cep">CEP</label>
+                            <input type="text" id="cep" name="cep">
+                        </div>
+                        <div class="input">
+                            <label for="andress">Endereço</label>
+                            <input type="text" id="endereco" name="andress">
+                        </div>
+                        <div class="input">
+                            <label for="bairro">Bairro</label>
+                            <input type="text" id="bairro" name="bairro">
+                        </div>
+                        <div class="input">
+                            <label for="number">Número</label>
+                            <input id="inputNumber" min="1" type="number" name="number">
+                        </div>
+                        <div class="input">
+                            <label for="complemento">Complemento</label>
+                            <input type="text" name="complemento">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="select-color">
+                    <h5>Selecione a cor do seu cartão</h5>
+                    <p>Cor selecionada: <span id="selectedColor">Roxo</span></p>
+
+                    <div class="colors">
+                        <div onclick="toggleColor(this)" class="color roxo active" data-color="roxo"></div>
+                        <div onclick="toggleColor(this)" class="color escuro" data-color="escuro"></div>
+                    </div>
+                </div>
+
+                <button class="btn">PEDIR CARTÃO</button>
+            </div>
+        </div>
+    </section>
 
     <input type="text" style="display: none;">
 
     <footer class="container" id="footer"></footer>
 
-    <script>
-
-        function toggleColor(element) {
-            const cor = element.getAttribute('data-color');
-            const colorSpan = document.getElementById('color');
-
-            colorSpan.textContent = cor.charAt(0).toUpperCase() + cor.slice(1);
-            
-            const colors = document.querySelectorAll('.color')
-
-            colors.forEach(color => color.classList.remove('active'));
-            element.classList.add('active')
-        }
-
-        // if (localStorage.getItem("Login") === null) window.location.href = "https://localizabus.discloud.app/"
-    
-        let target = JSON.parse(localStorage.getItem("Login"))
-        if(!target.signature) window.location.href = "https://localizabus.discloud.app/"
-        
-        const select = document.querySelector('select');
-        const input = document.querySelector('input');
-
-        select.addEventListener('change', () => {
-            const selectOption = select.value;
-
-            if (selectOption === 'endereco') { // se a option tiver o valor de endereco
-                input.style.display = 'none' // vai sumir o input
-            } else {
-                input.style.display = 'block' // caso contrário, o input vai aparecer
-            }
-        })
-
-
-
-    </script>
     <script src="../script.js"></script>
+    <script src="../scripts/assinatura.js"></script>
 </body>
 
 </html>

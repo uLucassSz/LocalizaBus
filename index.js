@@ -38,9 +38,18 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + '/html/index.html')
 })
 
+function isEmailValid(email) {
+    // Expressão regular para verificar o formato do email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
 app.post("/register", async (req, res) => {
 
     const { user, password, email } = req.body
+    if (!isEmailValid(email)) {
+        return res.json({ message: "O email não é válido." });
+    }
     if (!user || !email || !password) return res.json({ message: "Missing content" })
 
     const account = await database.findOne({ $or: [{ name: user }, { email }] })
