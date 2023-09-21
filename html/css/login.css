@@ -31,6 +31,20 @@
     font-size: .9375rem;
     color: #C1C1C1;
 }
+.msg-error{
+    display: none;
+    text-align: center;
+    background: #f71d1d;
+    padding: .5rem;
+    font-size: .875rem;
+    width: 100%;
+    color: var(--white-color);
+    border-radius: 3px;
+    margin-top: 5px;
+}
+.msg-error.active{
+    display: block;
+}
 
 .inputContainer{
     display: flex;

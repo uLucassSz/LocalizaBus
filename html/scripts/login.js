@@ -53,36 +53,47 @@ function tradeLogin() {
     return
 }
 
+const errorMsg = document.querySelector('.msg-error');
+
 async function register() {
     const user = document.getElementById("user").value
     const password = document.getElementById("password").value
     const email = document.getElementById("email").value
 
+    
     return fetch("https://localizabus.discloud.app/register", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ user, password, email })
-        })
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ user, password, email })
+    })
             .then(res => res.json())
             .then(data => {
-                if(data.message) return // Falar pro user que deu ruim
+                if(data.message) {
+                    errorMsg.textContent = data.message;
+                    errorMsg.classList.add('active')
+                    return;
+                }
                 localStorage.setItem('Login', JSON.stringify(data))
                 return logged(data)
             })
             .catch(console.log)
 }
-
+        
 async function login() {
     const user = document.getElementById("user").value
     const password = document.getElementById("password").value
-
+        
     fetch("https://localizabus.discloud.app/getlogin", {
         method: "GET",
         headers: { user, password }
     })
         .then(res => res.json())
         .then(data => {
-            if (data.message) return // Deu ruim de algum jeito
+            if (data.message) {
+                    errorMsg.textContent = data.message;
+                    errorMsg.classList.add('active')
+                    return;
+                }
             localStorage.setItem("Login", JSON.stringify(data))
             return logged(data)
         })

@@ -11,5 +11,5 @@ export default async (userlogin, password) => {
         })
     if (!data) return { message: "Nenhuma conta foi encontrada" }
     if (password == data.password) return data
-    return { message: "Dados da conta não combinam" }
+    return { message: "A senha está incorreta" }
 }

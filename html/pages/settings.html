@@ -37,8 +37,9 @@
             <div class="settings-profile active">
                 <div class="profile-content">
                     <div class="photo">
-                        <img src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" alt="">
-                        <i class="bx bxs-camera"></i>
+                        <img src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" alt="" id="profileAvatar">
+                        <input type="file" name="file" id="file" style="display: none">
+                        <label for="file"><i class="bx bxs-camera"></i></label>
                     </div>
                     <div class="name">
                         <span id="profileName"></span>
@@ -46,7 +47,7 @@
                     </div>
                 </div>
                 
-                <form>
+                <!-- <form> -->
                     <div class="input-container">
                         <div class="input-box">
                             <label for="user">Nome de usuário</label>
@@ -58,15 +59,15 @@
                         </div>
                         <div class="input-box">
                             <label for="user">Data de nascimento</label>
-                            <input type="date">
+                            <input type="date" id="birthday">
                         </div>
                         <div class="input-box">
                             <label for="user">CPF</label>
-                            <input type="text" id="inputCPF" maxlength="14" value="000.000.000-00">
+                            <input type="text" id="inputCPF" maxlength="14" value="">
                         </div>
                         <div class="input-box">
                             <label for="user">Número de telefone</label>
-                            <input type="text" maxlength="15" id="inputTel" value="(19) 99999-9999">
+                            <input type="text" maxlength="15" id="inputTel" value="">
                         </div>
                         <div class="input-box password">
                             <label for="user">Alterar senha</label>
@@ -78,8 +79,8 @@
 
                     </div>
 
-                    <button type="submit">Salvar</button>
-                </form>
+                    <button onclick="saveChanges()">Salvar</button>
+                <!-- </form> -->
             </div>
 
             <div class="settings-payments">

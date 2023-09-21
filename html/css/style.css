@@ -278,6 +278,12 @@ footer{
     }
 }
 
+@media(max-width: 916px) {
+    .settings .input-box,
+    .settings .input-box input{
+        max-width: none;
+    }
+}
 @media(max-width: 800px) {
     .home{
         flex-direction: column;
