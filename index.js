@@ -62,17 +62,16 @@ app.post("/register", async (req, res) => {
 
 app.post('/updateuser', async (req, res) => {
     try {
-        const { id, name, email, phone, password, cpf, birthday } = req.body;
+        const { id, valueName, valueEmail, valueTel, valuePass, valueCPF, valueDate } = req.body;
 
-        // Use o modelo Mongoose para encontrar o usuário por ID e atualizar os dados
         const updatedUser = await database.findByIdAndUpdate(id, {
-            name: name,
-            email: email,
-            phone: phone,
-            password: password,
-            cpf: cpf,
-            birthday: birthday
-        }, { new: true });
+            name: valueName,
+            email: valueEmail,
+            phone: valueTel,
+            password: valuePass,
+            cpf: valueCPF,
+            birthday: valueDate
+        }, {new: true});
 
         if (!updatedUser) {
             res.status(404).json({ message: 'Usuário não encontrado' });
@@ -84,7 +83,6 @@ app.post('/updateuser', async (req, res) => {
         res.status(500).json({ message: 'Erro interno do servidor' });
     }
 });
-
 
 app.get("/getlogin", async (req, res) => {
     const { user, password } = req.headers
@@ -100,6 +98,7 @@ const routes = [
     { name: ["/settings", "/configuracao"], path: "/html/pages/settings.html" },
     { name: ["/assinatura"], path: "/html/pages/assinatura.html" },
     { name: ["/buspremium", "/comprar"], path: "/html/pages/buy.html" },
+    { name: ["/suporte", "/ajuda"], path: "/html/pages/suporte.html" },
 ]
 
 for (const route of routes)

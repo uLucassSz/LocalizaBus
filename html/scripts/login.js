@@ -82,7 +82,9 @@ async function register() {
 async function login() {
     const user = document.getElementById("user").value
     const password = document.getElementById("password").value
-        
+    const btnForm = document.querySelector('.btnForm')
+    btnForm.classList.toggle('active');
+    
     fetch("https://localizabus.discloud.app/getlogin", {
         method: "GET",
         headers: { user, password }
@@ -94,8 +96,11 @@ async function login() {
                     errorMsg.classList.add('active')
                     return;
                 }
-            localStorage.setItem("Login", JSON.stringify(data))
-            return logged(data)
+                
+                setTimeout(() => {
+                    localStorage.setItem("Login", JSON.stringify(data))
+                    return logged(data)
+            }, 6000);
         })
         .catch(console.log)
 }

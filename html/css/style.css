@@ -272,6 +272,12 @@ footer{
     }
 }
 
+@media (max-width: 1125px) {
+    .support{
+        flex-direction: column;
+        gap: 50px;
+    }
+}
 @media (max-width: 1000px) {
     .premium img, .signature-card img{
         width: 100%;
@@ -313,6 +319,9 @@ footer{
 @media (max-width: 500px) {
     .home img{
         width: 450px;
+    }
+    .support-wrapper{
+        right: 0;
     }
 }
 @media (max-width: 550px) {

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localiza Bus</title>
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+
+    <!-- Import - CSS GLOBAL -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Import - CSS BUY -->
+    <link rel="stylesheet" href="../css/suporte.css">
+
+    <!-- Import - BoxIcons --> 
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav class="container" id="navbar"></nav>
+
+    <section class="support container">
+        <div class="left-support">
+            <div class="heading">
+                <small>SUPORTE & ATENDIMENTO</small>
+                <h5>Está precisando de ajuda? Confira os meios disponíveis</h5>
+            </div>
+
+            <div class="support-list">
+                <div class="support-item">
+                    <i class="bx bxl-instagram-alt icon"></i>
+                    <div class="support-details">
+                        <small>Instagram</small>
+                        <a href="#" class="support-link">@localizabus</a>
+                    </div>
+                </div>
+                <div class="support-item">
+                    <i class="bx bxs-chat icon"></i>
+                    <div class="support-details">
+                        <small>Atendimento online</small>
+                        <span onclick="startSupport()" class="support-link">Iniciar atendimento</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text">
+                <h6>OBSERVAÇÕES:</h6>
+                <p>No <span>atendimento online</span>, estamos disponíveis para esclarecer dúvidas de natureza mais simples, excluindo aquelas relacionadas a compras, reembolsos e assuntos similares.
+                <br><br>
+                Dúvidas de maior complexidade serão abordadas por <span>e-mail</span>, e você pode enviá-las utilizando o card ao lado.</p>
+            </div>
+        </div>
+
+        <div class="right-support">
+            <div class="support-box">
+                <h4>Entrar em contato</h4>
+
+                <form>
+                    <div class="input-box">
+                        <label>Endereço de e-mail:</label>
+                        <input type="email">
+                    </div>
+                    <div class="input-box">
+                        <label>Nome e sobrenome:</label>
+                        <input type="text">
+                    </div>
+                    <div class="input-box">
+                        <label>Assunto relacionado:</label>
+                        <select>
+                            <option disabled selected>Selecione um assunto</option>
+                            <option>Suporte relacionado a compras</option>
+                            <option>Suporte técnico</option>
+                            <option>Outro</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <label>Mensagem:</label>
+                        <textarea rows="5"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">ENVIAR MENSAGEM</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <footer id="footer"></footer>
+
+    <div class="chat-support">
+        <div class="support-wrapper">
+            <div class="chat-heading">
+                <span>Localiza Suporte</span>
+                <i class="bx bx-x" onclick="closeSupport()"></i>
+            </div>
+
+            <div class="chat-container">
+                <div class="chat-box received">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe8lORm2YdQoszBiVsivoP0Xk8Xdcrk2B8ng&usqp=CAU" alt="">
+                    <div class="chat-msg ">
+                        <span class="author">Suporte</span>
+                        <p>Olá! Como posso ajudá-lo hoje? Sinta-se à vontade para fazer suas perguntas.</p>
+                    </div>
+                </div>
+                <div class="chat-box sent">
+                    <div class="chat-msg ">
+                        <p>Oi! Bom dia, gostaria de saber como funciona os métodos de pagamento e como posso comprar o BusPremium.</p>
+                    </div>
+                </div>
+
+            <div class="chat-input">
+                <div class="input">
+                    <input type="text" placeholder="Digite sua mensagem">
+                    <button><i class="bx bxs-send"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+    <script src="../scripts/suporte.js"></script>
+</body>
+</html>

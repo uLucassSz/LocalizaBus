@@ -1,4 +1,4 @@
-// if (localStorage.getItem("Login") === null) window.location.href = "https://localizabus.discloud.app/"
+if (localStorage.getItem("Login") === null) window.location.href = "https://localizabus.discloud.app/"
 
 const profileAvatar = document.getElementById('profileAvatar')
 const selectFile = document.getElementById('file')
@@ -88,22 +88,22 @@ function closeMethod() {
     document.body.style.overflowY = 'auto'
 }
 
-// SHOW VALUES SETTINGS
 const userData = JSON.parse(localStorage.getItem('Login'));
-
 const inputName = document.getElementById('inputName');
+const inputPass = document.getElementById('inputPass');
+const inputEmail = document.getElementById('inputEmail');
+const inputDate = document.getElementById('birthday')
+
 const profileName = document.getElementById('profileName');
 if (userData && userData.name) {
     inputName.value = profileName.textContent = userData.name;
 }
 
-const inputEmail = document.getElementById('inputEmail');
 const profileEmail = document.getElementById('profileEmail');
 if (userData && userData.email) {
     inputEmail.value = profileEmail.textContent = userData.email;
 }
 
-const inputPass = document.getElementById('inputPass');
 if (userData && userData.password) {
     inputPass.value = userData.password;
 }
@@ -116,55 +116,6 @@ if (userData && userData.phone) {
     inputTel.value = userData.phone
 }
 
-const inputDate = document.getElementById('birthday')
 if (userData && userData.birthday) {
     inputDate.value = userData.birthday
-}
-
-// SAVE CHANGES
-
-// const userData = JSON.parse(localStorage.getItem("Login"));
-const userId = userData._id; // Declare a variável userId aqui
-
-
-console.log("userId:", userId);
-function saveChanges() {    
-
-    
-
-    fetch(`https://localizabus.discloud.app/updateuser?id=${userId}`, {
-        method: "POST", // Use POST para enviar dados
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-            name: inputName,
-            email: inputEmail,
-            phone: inputTel,
-            password: inputPass,
-            cpf: inputCPF,
-            birthday: inputDate
-        }),
-    })
-    .then((response) => response.json())
-    .then((data) => {
-        if (data.message === "success") {
-            alert("Informações atualizadas com sucesso!");
-
-            // Atualize os dados do usuário no armazenamento local
-            userData.name = inputName;
-            userData.email = inputEmail;
-            userData.phone = inputTel;
-            userData.password = inputPass;
-            userData.cpf = inputCPF;
-            userData.birthday = inputDate;
-
-            localStorage.setItem("Login", JSON.stringify(userData));
-        } else {
-            alert("Falha ao atualizar informações. Por favor, tente novamente.");
-        }
-    })
-    .catch((error) => {
-        console.error("Erro ao atualizar informações:", error);
-    });
 }

@@ -18,7 +18,7 @@ navbar.innerHTML = `<a href="https://localizabus.discloud.app" class="logo"><i c
                 <a href="#" class="profile-link">Pagamentos</a>
             </div>
             <div class="profile-box">
-                <a href="#" class="profile-link">Suporte & Atendimento</a>
+                <a href="https://localizabus.discloud.app/suporte" class="profile-link">Suporte & Atendimento</a>
             </div>
             <div class="profile-box">
                 <a href="#" class="profile-link">Termos de uso</a>
